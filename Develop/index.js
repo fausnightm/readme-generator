@@ -1,9 +1,22 @@
 // TODO: Include packages needed for this application
 // Install inquirer
 // place inquirer in a variable
+const inquirer = require("inquirer");
+const fs = require('fs');
+const axios = require("axios");
+const generate = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: "input",
+        name: "title",
+        message: "What is the title of your project?"
+    },
+    {
+        
+    }
+];
 
 // Title, description, table of contents, installation, usage, license, contributing, tests, and questions
 
