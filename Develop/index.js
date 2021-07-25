@@ -23,14 +23,14 @@ const questions = [
     },
     {
         type: "input",
-        name: "Description",
+        name: "description",
         message: "Please provide your application's description.",
         validate: (value)=>{ if(value){return true} else{return 'I need a valid input to continue'}},
 
     },
         {
         type: 'checkbox',
-        name: 'built with',
+        name: 'built',
         message: 'Please select the technologies that your application was built with.',
         choices: ['HTML', 'CSS', 'SASS', 'JavaScript', 'Node.js', 'Express.js'],
         default: 0,
@@ -95,7 +95,7 @@ inquirer
     .then(function(data){
         const userUrl = `https://api.github.com/users/${data.github}`;
 
-        axios.get(queryUrl).then(function(res) {
+        axios.get(userUrl).then(function(res) {
             
             const githubInfo = {
                 githubImage: res.data.avatar_url,
