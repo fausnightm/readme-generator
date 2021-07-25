@@ -26,11 +26,11 @@ ${data.description}
 
         ${data.installation}
 
-##Languages
+## Languages
 
 ${data.built}
 
-##Instructions
+## Instructions
 
 ${data.Instructions}
 
